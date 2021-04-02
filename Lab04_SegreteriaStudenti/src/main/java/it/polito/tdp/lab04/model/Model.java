@@ -6,10 +6,10 @@ import it.polito.tdp.lab04.DAO.CorsoDAO;
 
 public class Model {
 	
-	private CorsoDAO corsoDao = new CorsoDAO();
+	private CorsoDAO corsoDao;
 	
 	public Model() {
-		//corsoDao = new CorsoDAO();
+		corsoDao = new CorsoDAO();
 	}
 	
 	public List<Corso> getTuttiICorsi() {

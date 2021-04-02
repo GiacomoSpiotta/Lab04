@@ -82,10 +82,10 @@ public class FXMLController {
         assert boxCognome != null : "fx:id=\"boxCognome\" was not injected: check your FXML file 'Scene.fxml'.";
         assert boxArea != null : "fx:id=\"boxArea\" was not injected: check your FXML file 'Scene.fxml'.";
         
-        String[] corsiDisponibili = new String[corsodao.getTuttiICorsi().size()+1];
+        String[] corsiDisponibili = new String[model.getTuttiICorsi().size()+1];
         corsiDisponibili[0] = "Nessun corso in particolare";
         int i=1;
-        for(Corso si : corsodao.getTuttiICorsi()) {
+        for(Corso si : model.getTuttiICorsi()) {
         	corsiDisponibili[i++] = si.toString();
         }
         ObservableList <String> corsi = FXCollections.observableArrayList(corsiDisponibili);

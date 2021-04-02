@@ -67,8 +67,18 @@ public class CorsoDAO {
 	/*
 	 * Dato un codice insegnamento, ottengo il corso
 	 */
-	public void getCorso(Corso corso) {
-		// TODO
+	public Corso getCorso(Corso corso) {
+		
+		Corso c = null;
+		
+		for(Corso ci : this.getTuttiICorsi()) {
+			if(ci.getCodins().equals(corso.getCodins())) {
+				c = ci;;
+			}
+		}
+		
+		return c;
+		
 	}
 
 	/*
